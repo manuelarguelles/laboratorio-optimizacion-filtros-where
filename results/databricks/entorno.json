@@ -1,0 +1,12 @@
+{
+  "engine": "Databricks SQL 2026.36",
+  "warehouse": "Small serverless",
+  "photon": true,
+  "max_clusters": 1,
+  "dataset_rows": 1000000,
+  "target_rows": 100000,
+  "plan_cache_cleared": false,
+  "new_session_per_execution": true,
+  "result_cache_enabled": false,
+  "predictive_optimization": "disabled only in experiment schema"
+}

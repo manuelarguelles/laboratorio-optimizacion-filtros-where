@@ -1,0 +1,2 @@
+databricks-sql-connector[pyarrow]==4.6.0
+requests>=2.32,<3

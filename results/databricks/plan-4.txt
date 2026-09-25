@@ -1,0 +1,28 @@
+== Physical Plan ==
+PhotonResultStage (3)
++- PhotonColumnarToRow (2)
+   +- PhotonScan parquet workspace.period_filter_lab.clusterizada (1)
+
+
+(1) PhotonScan parquet workspace.period_filter_lab.clusterizada
+Output [5]: [Id#22040, Anio#22041, Mes#22042, Importe#22043, Detalle#22044]
+DictionaryFilters: [(Mes#22042 = 6), (Anio#22041 = 2025)]
+Location: PreparedDeltaFileIndex [s3://example-bucket/lab-data]
+ReadSchema: struct<Id:int,Anio:int,Mes:int,Importe:decimal(12,2),Detalle:string>
+RequiredDataFilters: [isnotnull(Anio#22041), isnotnull(Mes#22042), (Anio#22041 = 2025), (Mes#22042 = 6)]
+
+(2) PhotonColumnarToRow
+Input [5]: [Id#22040, Anio#22041, Mes#22042, Importe#22043, Detalle#22044]
+
+(3) PhotonResultStage
+Input [5]: [Id#22040, Anio#22041, Mes#22042, Importe#22043, Detalle#22044]
+
+
+== Photon Explanation ==
+The query is fully supported by Photon.
+== Optimizer Statistics (table names per statistics state) ==
+  missing = 
+  partial = clusterizada
+  full    = 
+Corrective actions: consider running the following command on all tables with missing or partial statistics
+  ANALYZE TABLE <table-name> COMPUTE STATISTICS FOR ALL COLUMNS

@@ -1,0 +1,32 @@
+== Physical Plan ==
+PhotonResultStage (4)
++- PhotonColumnarToRow (3)
+   +- PhotonProject (2)
+      +- PhotonScan parquet workspace.period_filter_lab.particionada (1)
+
+
+(1) PhotonScan parquet workspace.period_filter_lab.particionada
+Output [5]: [Id#21760, Importe#21763, Detalle#21764, Anio#21761, Mes#21762]
+Location: PreparedDeltaFileIndex [s3://example-bucket/lab-data]
+PartitionFilters: [isnotnull(Anio#21761), isnotnull(Mes#21762), (Anio#21761 = 2025), (Mes#21762 = 6)]
+ReadSchema: struct<Id:int,Importe:decimal(12,2),Detalle:string>
+
+(2) PhotonProject
+Input [5]: [Id#21760, Importe#21763, Detalle#21764, Anio#21761, Mes#21762]
+Arguments: [Id#21760, Anio#21761, Mes#21762, Importe#21763, Detalle#21764]
+
+(3) PhotonColumnarToRow
+Input [5]: [Id#21760, Anio#21761, Mes#21762, Importe#21763, Detalle#21764]
+
+(4) PhotonResultStage
+Input [5]: [Id#21760, Anio#21761, Mes#21762, Importe#21763, Detalle#21764]
+
+
+== Photon Explanation ==
+The query is fully supported by Photon.
+== Optimizer Statistics (table names per statistics state) ==
+  missing = 
+  partial = particionada
+  full    = 
+Corrective actions: consider running the following command on all tables with missing or partial statistics
+  ANALYZE TABLE <table-name> COMPUTE STATISTICS FOR ALL COLUMNS

@@ -1,0 +1,30 @@
+{
+  "version": "Microsoft SQL Server 2022 (RTM-CU27) (KB5104824) - 16.0.4295.3 (X64) \n\tAug 26 2026 11:02:22 \n\tCopyright (C) 2022 Microsoft Corporation\n\tDeveloper Edition (64-bit) on Linux (Ubuntu 22.04.5 LTS) <X64>",
+  "db": "LabPeriodos_example",
+  "compatibility_level": 160,
+  "host": "Mac ARM64 / OrbStack / contenedor linux/amd64 (traduccion x86)",
+  "cache": "ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE antes de cada medicion; buffer de datos caliente",
+  "cpu": {
+    "cpu_count": 2,
+    "scheduler_count": 2,
+    "physical_memory_kb": 3145728
+  },
+  "configuration": [
+    {
+      "name": "cost threshold for parallelism",
+      "value_in_use": 5
+    },
+    {
+      "name": "max degree of parallelism",
+      "value_in_use": 0
+    },
+    {
+      "name": "max server memory (MB)",
+      "value_in_use": 2147483647
+    }
+  ],
+  "counts": {
+    "total": 1000000,
+    "objetivo": 100000
+  }
+}

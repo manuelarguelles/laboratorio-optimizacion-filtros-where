@@ -1,0 +1,38 @@
+{
+  "base": {
+    "counts": {
+      "total": 1000000,
+      "objetivo": 100000,
+      "objetivo_aritmetico": 100000,
+      "ids": 1000000,
+      "largo_min": 100,
+      "largo_max": 100
+    },
+    "num_files": 8,
+    "size_bytes": 4101170
+  },
+  "particionada": {
+    "counts": {
+      "total": 1000000,
+      "objetivo": 100000,
+      "objetivo_aritmetico": 100000,
+      "ids": 1000000,
+      "largo_min": 100,
+      "largo_max": 100
+    },
+    "num_files": 480,
+    "size_bytes": 4348530
+  },
+  "clusterizada": {
+    "counts": {
+      "total": 1000000,
+      "objetivo": 100000,
+      "objetivo_aritmetico": 100000,
+      "ids": 1000000,
+      "largo_min": 100,
+      "largo_max": 100
+    },
+    "num_files": 1,
+    "size_bytes": 3379158
+  }
+}

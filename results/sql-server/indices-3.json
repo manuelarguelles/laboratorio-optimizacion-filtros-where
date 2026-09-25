@@ -1,0 +1,14 @@
+[
+  {
+    "name": null,
+    "type_desc": "HEAP"
+  },
+  {
+    "name": "IX_LabPeriodos_Anio",
+    "type_desc": "NONCLUSTERED"
+  },
+  {
+    "name": "IX_LabPeriodos_Mes",
+    "type_desc": "NONCLUSTERED"
+  }
+]

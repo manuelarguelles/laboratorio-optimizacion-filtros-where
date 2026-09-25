@@ -1,0 +1,340 @@
+ESCENARIO 1 MEDICION 1 PLANES_EXPULSADOS 11
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 1 ms, elapsed time = 1 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 118 ms,  elapsed time = 112 ms.
+ESCENARIO 1 MEDICION 2 PLANES_EXPULSADOS 8
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 111 ms,  elapsed time = 84 ms.
+ESCENARIO 1 MEDICION 3 PLANES_EXPULSADOS 8
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 127 ms,  elapsed time = 113 ms.
+ESCENARIO 1 MEDICION 4 PLANES_EXPULSADOS 8
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 1 ms, elapsed time = 1 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 126 ms,  elapsed time = 116 ms.
+ESCENARIO 1 MEDICION 5 PLANES_EXPULSADOS 8
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 1 ms, elapsed time = 1 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 117 ms,  elapsed time = 78 ms.
+ESCENARIO 2 MEDICION 1 PLANES_EXPULSADOS 14
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 3 ms, elapsed time = 3 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 96 ms,  elapsed time = 71 ms.
+ESCENARIO 2 MEDICION 2 PLANES_EXPULSADOS 9
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 106 ms,  elapsed time = 93 ms.
+ESCENARIO 2 MEDICION 3 PLANES_EXPULSADOS 9
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 103 ms,  elapsed time = 80 ms.
+ESCENARIO 2 MEDICION 4 PLANES_EXPULSADOS 9
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 109 ms,  elapsed time = 77 ms.
+ESCENARIO 2 MEDICION 5 PLANES_EXPULSADOS 9
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 94 ms,  elapsed time = 64 ms.
+ESCENARIO 3 MEDICION 1 PLANES_EXPULSADOS 11
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 3 ms, elapsed time = 3 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 94 ms,  elapsed time = 65 ms.
+ESCENARIO 3 MEDICION 2 PLANES_EXPULSADOS 8
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 94 ms,  elapsed time = 64 ms.
+ESCENARIO 3 MEDICION 3 PLANES_EXPULSADOS 8
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 3 ms, elapsed time = 3 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 98 ms,  elapsed time = 67 ms.
+ESCENARIO 3 MEDICION 4 PLANES_EXPULSADOS 8
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 86 ms,  elapsed time = 65 ms.
+ESCENARIO 3 MEDICION 5 PLANES_EXPULSADOS 8
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 3 ms, elapsed time = 3 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 3, logical reads 16130, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 94 ms,  elapsed time = 64 ms.
+ESCENARIO 4 MEDICION 1 PLANES_EXPULSADOS 12
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 1, logical reads 1733, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 28 ms,  elapsed time = 45 ms.
+ESCENARIO 4 MEDICION 2 PLANES_EXPULSADOS 9
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 2 ms, elapsed time = 2 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 1, logical reads 1733, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 18 ms,  elapsed time = 50 ms.
+ESCENARIO 4 MEDICION 3 PLANES_EXPULSADOS 9
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 1 ms, elapsed time = 1 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 1, logical reads 1733, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 26 ms,  elapsed time = 37 ms.
+ESCENARIO 4 MEDICION 4 PLANES_EXPULSADOS 9
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 1 ms, elapsed time = 1 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 1, logical reads 1733, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 28 ms,  elapsed time = 45 ms.
+ESCENARIO 4 MEDICION 5 PLANES_EXPULSADOS 9
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 1 ms, elapsed time = 1 ms.
+lab-container
+
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+lab-container
+
+Table 'LabPeriodos'. Scan count 1, logical reads 1733, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+lab-container
+
+
+ SQL Server Execution Times:
+   CPU time = 23 ms,  elapsed time = 44 ms.

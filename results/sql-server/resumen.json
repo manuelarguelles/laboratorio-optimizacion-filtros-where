@@ -1,0 +1,65 @@
+[
+  {
+    "escenario": 1,
+    "operadores": [
+      "Parallelism",
+      "Table Scan"
+    ],
+    "cpu_ms": 118,
+    "elapsed_ms": 112,
+    "lecturas_logicas": 16130,
+    "compilacion_cpu_ms": 1,
+    "compilacion_elapsed_ms": 1,
+    "cliente_ms": 316.109,
+    "last_worker_time": 140050,
+    "last_elapsed_time": 112911,
+    "last_physical_reads": 0
+  },
+  {
+    "escenario": 2,
+    "operadores": [
+      "Parallelism",
+      "Table Scan"
+    ],
+    "cpu_ms": 103,
+    "elapsed_ms": 77,
+    "lecturas_logicas": 16130,
+    "compilacion_cpu_ms": 2,
+    "compilacion_elapsed_ms": 2,
+    "cliente_ms": 320.766,
+    "last_worker_time": 121273,
+    "last_elapsed_time": 74024,
+    "last_physical_reads": 0
+  },
+  {
+    "escenario": 3,
+    "operadores": [
+      "Parallelism",
+      "Table Scan"
+    ],
+    "cpu_ms": 94,
+    "elapsed_ms": 65,
+    "lecturas_logicas": 16130,
+    "compilacion_cpu_ms": 3,
+    "compilacion_elapsed_ms": 3,
+    "cliente_ms": 314.098,
+    "last_worker_time": 109391,
+    "last_elapsed_time": 64490,
+    "last_physical_reads": 0
+  },
+  {
+    "escenario": 4,
+    "operadores": [
+      "Clustered Index Seek"
+    ],
+    "cpu_ms": 26,
+    "elapsed_ms": 45,
+    "lecturas_logicas": 1733,
+    "compilacion_cpu_ms": 1,
+    "compilacion_elapsed_ms": 1,
+    "cliente_ms": 306.987,
+    "last_worker_time": 45288,
+    "last_elapsed_time": 45290,
+    "last_physical_reads": 0
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "escenario": 1,
+    "execution_time_ms": 99,
+    "compilation_time_ms": 210,
+    "total_time_ms": 313,
+    "task_total_time_ms": 123,
+    "read_bytes": 5183720,
+    "read_files_count": 8,
+    "pruned_files_count": 0,
+    "rows_read_count": 100000,
+    "read_cache_bytes": 5183720,
+    "read_remote_bytes": 0,
+    "result_from_cache": false,
+    "cliente_ms": 1844.833
+  },
+  {
+    "escenario": 2,
+    "execution_time_ms": 88,
+    "compilation_time_ms": 203,
+    "total_time_ms": 298,
+    "task_total_time_ms": 102,
+    "read_bytes": 5183720,
+    "read_files_count": 8,
+    "pruned_files_count": 0,
+    "rows_read_count": 100000,
+    "read_cache_bytes": 5183720,
+    "read_remote_bytes": 0,
+    "result_from_cache": false,
+    "cliente_ms": 1783.98
+  },
+  {
+    "escenario": 3,
+    "execution_time_ms": 85,
+    "compilation_time_ms": 179,
+    "total_time_ms": 273,
+    "task_total_time_ms": 72,
+    "read_bytes": 381970,
+    "read_files_count": 8,
+    "pruned_files_count": 472,
+    "rows_read_count": 100000,
+    "read_cache_bytes": 381970,
+    "read_remote_bytes": 0,
+    "result_from_cache": false,
+    "cliente_ms": 1910.63
+  },
+  {
+    "escenario": 4,
+    "execution_time_ms": 216,
+    "compilation_time_ms": 218,
+    "total_time_ms": 473,
+    "task_total_time_ms": 151,
+    "read_bytes": 3731971,
+    "read_files_count": 1,
+    "pruned_files_count": 0,
+    "rows_read_count": 100000,
+    "read_cache_bytes": 3731971,
+    "read_remote_bytes": 0,
+    "result_from_cache": false,
+    "cliente_ms": 2631.947
+  }
+]
