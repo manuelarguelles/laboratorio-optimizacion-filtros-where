@@ -1,4 +1,4 @@
-# El WHERE no cuenta toda la historia
+# Laboratorio de optimización de filtros WHERE: SQL Server y Databricks
 
 **Un millón de filas, cuatro escenarios y dos motores: SQL Server y Databricks.**
 
