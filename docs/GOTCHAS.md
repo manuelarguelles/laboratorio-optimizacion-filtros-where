@@ -121,3 +121,35 @@ Hallazgos del laboratorio del 24-sep-2026. Los diagnósticos de planes y autenti
 **Evidencia y alcance:** El diagnóstico de autenticación precedió a la construcción de tablas; no forma parte de las mediciones.
 
 **Práctica:** Usar el token de la sesión CLI autenticada sin imprimirlo ni publicarlo; parametrizar perfil y warehouse. [Referencia](../databricks/ejecutar.py).
+
+## DE-PER-016 — El overwrite de tabla completa borra el liquid clustering sin error
+
+**Hallazgo:** En Fabric Runtime 2.0 (Spark 4.1.1, Delta 4.2.0), `saveAsTable` overwrite, `writeTo().overwrite`, `insertInto(overwrite=True)`, `overwritePartitions`, `save(path)` overwrite e `INSERT OVERWRITE` por SQL terminan en OK y dejan `clusteringColumns` vacío. Append, `insertInto`, `writeTo().append()`, MERGE, `save(path)` append, `replaceWhere` y DELETE + append lo conservan. La hipótesis de que PySpark no puede escribir en una tabla con liquid clustering quedó refutada.
+
+**Evidencia y alcance:** Tablas de ~1.000 filas, una corrida por variante, tabla recreada con clustering antes de cada una (las dos primeras sesiones salieron contaminadas por no hacerlo). Resultado de una versión concreta de Delta marcada como experimental en la documentación de Fabric.
+
+**Práctica:** Crear la tabla con `CLUSTER BY` y cargar con append, MERGE o `replaceWhere`; comprobar `clusteringColumns` después de cada carga que reemplace datos.
+
+## DE-PER-017 — Crear con clustering desde PySpark: no con el DataFrameWriter
+
+**Hallazgo:** `df.write.clusterBy(...).saveAsTable(...)` y `df.writeTo(...).clusterBy(...).create()` fallan con `DELTA_OPERATION_NOT_ALLOWED`; la opción `clusterByColumns` crea la tabla sin clustering y sin aviso. `DeltaTable.create(spark)...clusterBy(...)` y `CREATE TABLE ... CLUSTER BY` sí funcionan.
+
+**Evidencia y alcance:** Misma corrida que DE-PER-016.
+
+**Práctica:** Crear la tabla vacía con la API de Delta o con SQL y cargarla con append.
+
+## DE-PER-018 — Reemplazo total que conserva el clustering: replaceWhere=true, en un solo commit
+
+**Hallazgo:** `df.write.mode("overwrite").option("replaceWhere","true").saveAsTable(tabla)` conserva clustering, propiedades, comentario e historial, admite columnas nuevas con `mergeSchema` y es un solo commit. `INSERT INTO ... REPLACE WHERE true` por SQL pierde el clustering con el mismo predicado. `CREATE OR REPLACE ... CLUSTER BY ... AS SELECT` conserva el clustering pero pierde propiedades y comentario. `TRUNCATE`/`DELETE` + append y `createOrReplace` + append lo conservan, pero son dos commits y dejan la tabla vacía entre ambos.
+
+**Evidencia y alcance:** Bloques A y B de la fase 2, tablas chicas; el patrón ganador se repitió dos veces seguidas. Una guarda con precondición y aserción de `clusteringColumns` detectó la pérdida en el control negativo.
+
+**Práctica:** En notebooks con `full_refresh`, usar este patrón con precondición antes de escribir y aserción después; registrar la causa en una bitácora antes de fallar, porque el job solo muestra `System_Cancelled_Session_Statements_Failed`.
+
+## DE-PER-019 — Liquid clustering no ordena al escribir; el orden lo da OPTIMIZE
+
+**Hallazgo:** Con 10 M de filas (11 columnas, 51,3 bytes por fila, ~21 M de filas por GB) la tabla recién cargada quedó tan desordenada como la de control sin clustering. `OPTIMIZE` agrupó los archivos nuevos y `OPTIMIZE FULL` fue lo único que permitió descartar archivos. Cada reproceso full deshizo el orden físico aunque `clusteringColumns` se conservó. Con 0,5 GB (3 archivos) se leyó el 67 % de los bytes para un predicado que pide el 0,6 % de las filas.
+
+**Evidencia y alcance:** Bloque C, una corrida. Que el beneficio crece con el número de archivos es una inferencia, no una medición.
+
+**Práctica:** Programar `OPTIMIZE` (y `OPTIMIZE FULL` si hace falta) después de cada `full_refresh`; no juzgar el clustering por filas sino por cantidad y tamaño de archivos.

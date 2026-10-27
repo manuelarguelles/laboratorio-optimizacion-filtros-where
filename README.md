@@ -58,7 +58,7 @@ El clustered redujo lecturas **89,3%**. Los índices individuales estaban presen
 - Particionar produjo **480 archivos**, aproximadamente 9 KB de media. Leer menos bytes no convierte ese diseño en una recomendación general.
 - `EXPLAIN` no es un plan real instrumentado; tiempo agregado de tareas no es CPU; caché de datos no es caché de resultados ni caché de planes.
 
-Los **15 gotchas** tienen identificadores y evidencias: [GOTCHAS.md](docs/GOTCHAS.md).
+Los **19 gotchas** tienen identificadores y evidencias: [GOTCHAS.md](docs/GOTCHAS.md).
 
 ## Caché: qué se controló realmente
 
@@ -94,4 +94,16 @@ Los ejecutores públicos adaptan la configuración de los usados en el laborator
 
 Resultados medidos el **24-sep-2026**; publicación preparada el **25-sep-2026**. Se incluyen las 20 mediciones finales de cada motor, la primera ronda Databricks, planes SQL Server, EXPLAIN de Delta y métricas seleccionadas. Los metadatos identificadores de la infraestructura se sustituyeron u omitieron; los números se conservaron. [Procedencia y exportación](docs/PROCEDENCIA.md).
 
-No se ejecutó una variante en Microsoft Fabric. No se recomienda un proveedor, un índice o una partición únicamente a partir de estos tiempos. El siguiente experimento sería variar **bytes, selectividad y número de archivos** con un protocolo acordado, no aumentar filas hasta que gane una técnica.
+La variante de Microsoft Fabric se probó después, solo para comportamiento de escritura y no para tiempos de consulta (ver más abajo). No se recomienda un proveedor, un índice o una partición únicamente a partir de estos tiempos. El siguiente experimento sería variar **bytes, selectividad y número de archivos** con un protocolo acordado, no aumentar filas hasta que gane una técnica.
+
+## Extensión: liquid clustering en Microsoft Fabric Runtime 2.0 (27-oct-2026)
+
+Prueba posterior, con Spark 4.1.1 y Delta 4.2.0 (funciones de Delta 4.2 marcadas como experimentales por Microsoft). Tablas de 1.000 filas para el comportamiento de escritura y de 10 M de filas (~0,5 GB) para el volumen. No mide tiempos de consulta de forma concluyente.
+
+- **La escritura por PySpark funciona** con liquid clustering: append, MERGE, `replaceWhere` y las demás variantes de append conservan el clustering.
+- **El overwrite de tabla completa lo borra sin error**, por PySpark y por `INSERT OVERWRITE`. Patrón que lo conserva en un solo commit: `overwrite` con `replaceWhere = "true"`, con precondición y aserción de `clusteringColumns`.
+- **Crear desde PySpark:** `DeltaTable.create(spark)...clusterBy(...)`, no el `DataFrameWriter`.
+- **No hay clustering al escribir:** el orden lo da `OPTIMIZE`, y cada reproceso full lo deshace. Con ~0,5 GB (3 archivos) el descarte de archivos fue mínimo, coherente con el resultado de este laboratorio: a escala chica, liquid clustering no compensa.
+- **Pendiente:** el umbral en que empieza a compensar (varios GB y decenas de archivos) no está medido. Requiere tablas de varios GB.
+
+Detalle en [gotchas DE-PER-016 a 019](docs/GOTCHAS.md).
