@@ -58,7 +58,7 @@ El clustered redujo lecturas **89,3%**. Los índices individuales estaban presen
 - Particionar produjo **480 archivos**, aproximadamente 9 KB de media. Leer menos bytes no convierte ese diseño en una recomendación general.
 - `EXPLAIN` no es un plan real instrumentado; tiempo agregado de tareas no es CPU; caché de datos no es caché de resultados ni caché de planes.
 
-Los **19 gotchas** tienen identificadores y evidencias: [GOTCHAS.md](docs/GOTCHAS.md).
+Los **20 gotchas** tienen identificadores y evidencias: [GOTCHAS.md](docs/GOTCHAS.md).
 
 ## Caché: qué se controló realmente
 
@@ -104,6 +104,7 @@ Prueba posterior, con Spark 4.1.1 y Delta 4.2.0 (funciones de Delta 4.2 marcadas
 - **El overwrite de tabla completa lo borra sin error**, por PySpark y por `INSERT OVERWRITE`. Patrón que lo conserva en un solo commit: `overwrite` con `replaceWhere = "true"`, con precondición y aserción de `clusteringColumns`.
 - **Crear desde PySpark:** `DeltaTable.create(spark)...clusterBy(...)`, no el `DataFrameWriter`.
 - **No hay clustering al escribir:** el orden lo da `OPTIMIZE`, y cada reproceso full lo deshace. Con ~0,5 GB (3 archivos) el descarte de archivos fue mínimo, coherente con el resultado de este laboratorio: a escala chica, liquid clustering no compensa.
-- **Pendiente:** el umbral en que empieza a compensar (varios GB y decenas de archivos) no está medido. Requiere tablas de varios GB.
+- **Volumen (1, 5 y 20 GB, clave `Anio × Mes`):** liquid clustering compensa frente a no hacer nada desde unos 5 GB (~40 archivos tras `OPTIMIZE FULL`: 100 % → 7,5 % → 1,2 % de bytes leídos). Frente a la partición, que lee ~0,65 % en los tres tamaños, el tiempo empata hacia 20 GB. Para una clave de pocos valores y sin sesgo, la partición lee menos; el resultado no vale para claves de muchos valores distintos.
+- **Pendiente:** claves de alta cardinalidad o con sesgo, donde se espera que liquid clustering gane.
 
-Detalle en [gotchas DE-PER-016 a 019](docs/GOTCHAS.md).
+Detalle en [gotchas DE-PER-016 a 020](docs/GOTCHAS.md).
